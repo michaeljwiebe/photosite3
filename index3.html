@@ -1,0 +1,135 @@
+<!--/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { ... }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { ... }-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/mainBootstrap.css">
+  <!--<link src="js/jquery-3.1.1.slim.min.js" rel="stylesheet">
+  <link type="text/css" src="./css/bootstrap.min.css">-->
+  <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Dosis|Roboto" rel="stylesheet">
+  <script type="text/javascript" src="./js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <title>Michael Wiebe Photography</title>
+
+</head>
+<body>
+  <div class="container">
+    <div class="col-md-6" id="header-container">
+      <h1 id="logo">Michael Wiebe Photography </h1>
+      <h2>Photographing beautiful Philadelphia</h2>
+      <ul class="nav col-md-4">
+        <li id="first-nav" class="first-line">
+          <a href="#events" id="events" class="nav-link">Events</a></li>
+        <li class="first-line">
+          <a href="#family" id="family" class="nav-link">Family</a></li>
+        <li class="icon">
+          <a href="javascript:void(0);" class="nav-link" id="hamburger" >☰</a>
+</li>
+        <li class="first-line">
+          <a href="#nature" id="nature" class="nav-link">Nature</a></li>
+        <li class="first-line">
+          <a href="#city" class="nav-link">City</a></li>
+      </ul>
+      <ul class="nav2" class="col-md-4">
+        <li class="second-line">
+          <a href="../photoblog/blog.html" class="nav-link">Blog</a></li>
+        <li class="second-line">
+          <a href="#modalScreen" class="nav-link">Contact</a></li>
+      </ul>
+
+      </ul>
+    </div>
+    <div class="col-md-6" id="events">
+      <img src="img/wedding-16x9-500w.jpg" alt="wedding" id="eventsPreview">
+    </div>
+    <div class="background-photo col-md-6" id="family">
+      <img src="img/portrait-16x9-500w.jpg" alt="portrait" id="familyPreview">
+    </div>
+    <div class="background-photo col-md-6" id="kids">
+      <img src="img/kids-16x9-500w.jpg" alt="kids">
+    </div>
+    <div class="background-photo col-md-6" id="dance">
+      <img src="img/dance-16x9-500w.jpg" alt="dance">
+    </div>
+    <div class="background-photo col-md-6" id="nature">
+      <img src="img/nature-16x9-500w.jpg" alt="dance-2" id="naturePreview">
+    </div>
+    <div id="modalScreen" class="modalDialog">
+      <div id="modalBox">
+        <a href="#close" title="Close" class="close">X</a>
+        <h2 id="modalTitle">Contact me!</h2>
+        <p class="modalText">My prices are very reasonable and I would love to work for you.</p>
+        <p class="modalText">Shoot me an e-mail at wiebe.michael.j@gmail.com</p>
+      </div>
+    </div>
+  </div>
+  <script>
+    //$("#hamburger").on("click",
+    //  function(){
+    //    $(".nav2").toggleClass("responsive", "addOrRemove")})
+    //$("hamburger").on("click", function() {
+    //   $(".nav2").toggle("slide")
+    //})
+
+    //$("#hamburger").on("click",)
+    $( "#hamburger" ).click(function() {
+      $( ".nav2" ).slideDown( "slow", function() {
+      // Animation complete.
+      });
+    });
+
+    $("#events").hover(
+      function(){
+        $("#eventsPreview").addClass("visible");},
+      function(){
+        $("#eventsPreview").removeClass("visible");}
+      )
+    $("#family").hover(
+      function(){
+        $("#familyPreview").addClass("visible");},
+      function(){
+        $("#familyPreview").removeClass("visible");}
+      )
+    $("#nature").hover(
+      function(){
+        $("#naturePreview").addClass("visible");},
+      function(){
+        $("#naturePreview").removeClass("visible");}
+      )
+    $("#city").hover(
+      function(){
+        $("#cityPreview").addClass("visible");},
+      function(){
+        $("#cityPreview").removeClass("visible");}
+      )
+      /*
+      function myFunction() {
+      var x = document.getElementById("myNav");
+      if (x.className === "nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "nav";
+        }
+      }
+      */
+
+    /*
+
+      */
+  </script>
+</body>
+</html>
